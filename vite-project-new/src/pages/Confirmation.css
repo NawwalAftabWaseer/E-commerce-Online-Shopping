@@ -1,0 +1,245 @@
+.confirmation-container {
+  min-height: 100vh;
+  background-image: url("../Images/BG5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.confirmation-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.confirmation-message,
+.delivery-details {
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-summary {
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.order-summary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-message:hover,
+.delivery-details:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-message h1 {
+  font-size: 2rem;
+  color: #2980b9;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.confirmation-message p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.order-summary h2 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.delivery-details h2 {
+  font-size: 1.5rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.summary-items {
+  margin-bottom: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.summary-item span,
+.summary-row span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2980b9;
+  margin-top: 0.5rem;
+}
+
+.delivery-details p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.home-button,
+.order-details-button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover,
+.order-details-button:hover {
+  background-color: #1f618d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+  border-radius: 35px;
+}
+
+.home-button {
+  animation: bounce 2s infinite;
+}
+
+.item-details {
+  flex: 1;
+}
+.item-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.item-price {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-total {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #2980b9;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.order-details-button {
+  background-color: #f5f5f5;
+  color: #2980b9;
+  border: 1px solid #2980b9;
+}
+
+.order-details-button:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .home-button,
+  .order-details-button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

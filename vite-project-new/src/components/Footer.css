@@ -1,0 +1,105 @@
+.footer {
+  background-color: #ffffff;
+  color: black;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+  min-height: 100px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: black;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.quick-links ul li a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: black;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
+
+.social-icons svg {
+  transition: color 0.3s ease;
+}
+
+.social-icons svg:hover {
+  color: #f1c40f;
+}
+
+.footer-section.contact-us {
+  flex: 1;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.footer-section.social-media {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex: 1;
+}
+
+.footer-section.quick-links {
+  margin-left: auto;
+}
+
+.content {
+  flex: 1;
+}
